@@ -1,0 +1,6 @@
+// Configuration parameters
+const config = {
+    PORT: 8000
+};
+
+module.exports = config;
