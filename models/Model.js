@@ -17,6 +17,13 @@ class Model{
             });
         });	
     }
+    async fetch_all(query){
+        return await this.query(query);
+    }
+    async fetch_record(query){
+        const result = await this.query(query);
+        return result ? result[0] : null;
+    }
 }
 
 module.exports = Model;
