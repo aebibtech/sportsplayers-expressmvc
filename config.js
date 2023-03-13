@@ -6,6 +6,12 @@ const config = {
         user: 'root',
         password: '',
         database: 'express_mvc'
+    },
+    SESSION_CONFIG: {
+        secret: 'keyboardkitteh',
+        resave: false,
+        saveUninitialized: true,
+        cookie: { maxAge: 60000 }
     }
 };
 

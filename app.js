@@ -1,17 +1,16 @@
 const config = require('./config');
 const express = require('express');
-const bodyParser = require('body-parser');
-const session = require('express-session');
 const app = express();
-app.use(session({
-    secret: 'keyboardkitteh',
-    resave: false,
-    saveUninitialized: true,
-    cookie: { maxAge: 60000 }
-}));
+
+/* SESSION */
+const session = require('express-session');
+app.use(session(config.SESSION_CONFIG));
+
+/* BODY PARSER */
+const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended: true}));
-const routes = require('./routes');
-/* This is where your assets should be stored. */
+
+/* This is where your static assets should be stored. */
 app.use(express.static(__dirname + '/assets'));
 
 /* views */
@@ -19,6 +18,7 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
 /* DO NOT CHANGE - define your routes in the routes.js file */
+const routes = require('./routes');
 app.use('/', routes);
 
 app.listen(config.PORT, function(){
