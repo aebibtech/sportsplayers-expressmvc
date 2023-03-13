@@ -3,54 +3,29 @@
     font-size: 20px;
 }
 
-span{
-    display: inline-block;
-    width: 250px;
-    font-weight: 600;
-}
-
-form{
-    width: 40%;
-    padding: 20px;
-    outline: 1.5px solid #333;
+main{
+    width: 50%;
     margin: 0 auto;
-    background-color: #eee;
-    border-radius: 5px;
 }
 
-label, textarea{
-    display: block;
+h1{
+    display: flex;
+    justify-content: space-between;
 }
 
-label{
-    margin-bottom: 12px;
+.highlight{
+    text-decoration: underline;
 }
 
-input, select{
-    display: inline-block;
-    width: 200px;
-}
-
-textarea{
-    width: 100%;
-    resize: none;
-}
-
-#submit-area{
-    text-align: right;
-}
-
-#submit{
+a{
+    text-decoration: none;
     color: #fff;
-    background-color: rgb(67, 67, 218);
-    width: 90px;
-    border: none;
+    background-color: rgb(167, 18, 18);
+    padding: 6px 12px;
     border-radius: 5px;
-    margin-top: 12px;
-    padding: 5px 10px;
     transition: all 0.2s;
 }
 
-#submit:hover{
-    background-color: blue;
+a:hover{
+    background-color: red;
 }

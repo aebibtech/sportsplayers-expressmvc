@@ -4,7 +4,7 @@ const Router = Express.Router();
 
 /* Require your controllers here */
 // const UserController = require('./controllers/User');
-const SurveyForm = require('./controllers/SurveyForm');
+const Cars = require('./controllers/Cars');
 
 /* Define your routes here
 Pass a route on Router.get with the appropriate function from your controller.
@@ -15,7 +15,7 @@ You can also append '?' at the end of the route parameter in order to make it op
 */
 // Router.get("/", UserController.index);
 // Router.get("/hello/:num?", UserController.hello);
-Router.get('/', SurveyForm.index);
-Router.post('/result', SurveyForm.result);
+Router.get('/', Cars.index);
+Router.get('/reset', Cars.reset);
 
 module.exports = Router;
