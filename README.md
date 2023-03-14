@@ -8,7 +8,7 @@ This is a Model-View-Controller (MVC) framework on top of Express.js. If you are
 **controllers** - store controller classes here.  
 **models** - store model classes here.  
 **views** - store view files here. View files follow the EmbeddedJS syntax. Support for different template engines will be developed soon.  
-**app.js** - main file to be started using the `node` command.
+**app.js** - main file to be started using the `node` command.  
 **node_modules** - Node package dependecies for this framework.
 
 ## Usage
