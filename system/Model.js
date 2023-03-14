@@ -1,6 +1,6 @@
 class Model{
     constructor(){
-        const config = require('../config');
+        const config = require('../config/config');
         const mysql = require('mysql2');
         this.connection = mysql.createConnection(config.MYSQL_CONFIG);
     }

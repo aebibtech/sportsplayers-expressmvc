@@ -1,4 +1,4 @@
-const Model = require('./Model');
+const Model = require('../system/Model');
 
 class Car extends Model{
     getAllCars(){

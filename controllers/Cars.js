@@ -1,4 +1,6 @@
-class Cars{
+const Controller = require('../system/Controller');
+
+class Cars extends Controller{
     async index(request, response){
         if(!request.session.timesVisited){
             request.session.timesVisited = 1;
