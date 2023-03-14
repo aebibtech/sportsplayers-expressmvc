@@ -1,7 +1,7 @@
 /* DO NOT CHANGE */
 const Express = require("express");
 const Router = Express.Router();
-const Controllers = require('../system/Controllers');
+const Controllers = require('../system/EnumerateControllers');
 
 /* Define your routes here
 Pass a route on Router.get with the appropriate function from your controller.

@@ -1,6 +1,6 @@
-const Controller = require('../system/Controller');
+const BaseController = require('../system/BaseController');
 
-class Cars extends Controller{
+class Cars extends BaseController{
     async index(request, response){
         if(!request.session.timesVisited){
             request.session.timesVisited = 1;
