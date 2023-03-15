@@ -10,12 +10,7 @@ For route parameters, prepend it with ':' so that it will be available on reques
 Example: /hello/:num ; num can be accessed by calling request.params.num
 You can also append '?' at the end of the route parameter in order to make it optional.
 */
-// Router.get("/", UserController.index);
-// Router.get("/hello/:num?", UserController.hello);
-Router.get('/', Controllers.Students.index);
-Router.post('/login', Controllers.Students.login);
-Router.get('/logoff', Controllers.Students.logoff);
-Router.post('/register', Controllers.Students.register);
-Router.get('/students/profile', Controllers.Students.profile);
+// Router.get("/", Controllers.User.index);
+// Router.get("/hello/:num?", Controllers.User.hello);
 
 module.exports = Router;
