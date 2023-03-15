@@ -1,4 +1,4 @@
-const config = require('../config/config');
+const config = require('../application/config');
 const express = require('express');
 const app = express();
 const path = require('path');
@@ -15,11 +15,11 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(path.join(__dirname, '../assets')));
 
 /* views */
-app.set('views', path.join(__dirname, '../views'));
+app.set('views', path.join(__dirname, '../application/views'));
 app.set('view engine', 'ejs');
 
 /* DO NOT CHANGE - define your routes in the routes.js file */
-const routes = require('../config/routes');
+const routes = require('../application/routes');
 app.use('/', routes);
 
 function start(){
