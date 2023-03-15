@@ -1,8 +1,8 @@
 const BaseController = require('../../system/BaseController');
 
 class Welcome extends BaseController{
-    index(request, response){
-        response.render('welcome/index');
+    index(){
+        return this.loadView('welcome/index');
     }
 }
 

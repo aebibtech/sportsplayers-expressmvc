@@ -15,8 +15,14 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(path.join(__dirname, '../assets')));
 
 /* views */
-app.set('views', path.join(__dirname, '../application/views'));
+app.set('views', path.join(__dirname, '../application/_views'));
 app.set('view engine', 'ejs');
+
+/* Profiler */
+if(config.ENABLE_PROFILER){
+    const profiler = require('./middleware/Profiler');
+    app.use(profiler.profile());
+}
 
 /* DO NOT CHANGE - define your routes in the routes.js file */
 const routes = require('../application/routes');

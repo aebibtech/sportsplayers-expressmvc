@@ -12,7 +12,8 @@ const config = {
         resave: false,
         saveUninitialized: true,
         cookie: { maxAge: 60000 }
-    }
+    },
+    ENABLE_PROFILER: false
 };
 
 module.exports = config;
