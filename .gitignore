@@ -2,3 +2,4 @@
 application/controllers/*
 application/models/*
 application/views/*
+assets/*
