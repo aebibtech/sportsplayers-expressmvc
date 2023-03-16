@@ -65,6 +65,12 @@ class Sport extends BaseModel{
 
 module.exports = new Sport;
 ```
+#### Available model methods
+These methods return promises. Make sure to use Promises.then() or async/await to process the data contained in the promise.
+- **fetch_all(query)** - Returns a promise, when processed, returns an array of objects from the database or the error.
+- **fetch_record(query)** - Returns a promise, when processed, returns a single object from the database.
+- **insert(query)** -  Returns a promise, when processed, inserts the data to the database, returns the insert id of the record.
+- **escape(value)** - Properly escape values to protect against SQL injections.
 
 ### Routes
 Routes are configured at the `application/routes.js` file.
@@ -133,3 +139,8 @@ Filename: application/_views/sportsplayers/search.ejs
     </body>
 </html>
 ```
+
+### Enable the Profiler
+1. Go to `application/config.js`.
+2. Modify the value of `ENABLE_PROFILER` to `true`.
+3. Save the file.
