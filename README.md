@@ -41,8 +41,8 @@ Example: User.js -> class User extends BaseController
 4. Create an ES6 class that extends the BaseController class.
 5. Create methods that you will be using for the routes later. Methods should have the `request` and `response` as parameters.  
 Example:  
-Filename: Hello.js
 ```
+Filename: Hello.js
 const BaseController = require('../../system/BaseController');`
 
 class Hello extends BaseController{
