@@ -2,7 +2,7 @@ const config = require('../application/config');
 const express = require('express');
 const app = express();
 const path = require('path');
-
+const routes = require('../application/routes');
 /* SESSION */
 const session = require('express-session');
 app.use(session(config.SESSION_CONFIG));
@@ -18,14 +18,13 @@ app.use(express.static(path.join(__dirname, '../assets')));
 app.set('views', path.join(__dirname, '../application/_views'));
 app.set('view engine', 'ejs');
 
-/* Profiler */
+// /* Profiler */
 if(config.ENABLE_PROFILER){
     const profiler = require('./middleware/Profiler');
     app.use(profiler.profile());
 }
 
 /* DO NOT CHANGE - define your routes in the routes.js file */
-const routes = require('../application/routes');
 app.use('/', routes);
 
 function start(){

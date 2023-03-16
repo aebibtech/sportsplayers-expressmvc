@@ -1,8 +1,10 @@
+const connection = require('./Database');
+
 class BaseModel{
+    static lastExecutedQuery = [];
+    static callingClass = [];
     constructor(){
-        const config = require('../application/config');
-        const mysql = require('mysql2');
-        this.connection = mysql.createConnection(config.MYSQL_CONFIG);
+        this.connection = connection;
     }
     escape(value){
         return this.connection.escape(value);
@@ -10,8 +12,11 @@ class BaseModel{
     /** Basic Execute Query function **/
     query(query, parameters = null) {
         const connLoc = this.connection;
+        const fullQuery = this.connection.format(query, parameters);
+        BaseModel.lastExecutedQuery.push(fullQuery);
+        BaseModel.callingClass.push(this.constructor.name);
         return new Promise(function(resolve, reject){
-            connLoc.query(query, parameters, function(err, result){
+            connLoc.query(fullQuery, function(err, result){
                 try{
                     resolve(result);
                 }catch(e){

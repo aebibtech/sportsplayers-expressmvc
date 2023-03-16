@@ -2,10 +2,10 @@
 const config = {
     PORT: 8888,
     MYSQL_CONFIG: {
-        host: 'localhost',
-        user: 'root',
-        password: '',
-        database: 'express_mvc'
+        host: 'db4free.net',
+        user: 'paulaebib',
+        password: 'camano123123',
+        database: 'expressmvc'
     },
     SESSION_CONFIG: {
         secret: 'keyboardkitteh',
@@ -13,7 +13,7 @@ const config = {
         saveUninitialized: true,
         cookie: { maxAge: 60000 }
     },
-    ENABLE_PROFILER: false
+    ENABLE_PROFILER: true
 };
 
 module.exports = config;

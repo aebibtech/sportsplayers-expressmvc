@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Get the path to the controllers directory
-const controllersDir =  path.join(__dirname, '../application/controllers');
+const controllersDir =  path.join(__dirname, '../application/_controllers');
 
 // Get an array of all the controller files
 const controllerFiles = fs.readdirSync(controllersDir);
