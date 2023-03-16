@@ -1,0 +1,13 @@
+<%  if(players.length > 0){
+    for(var playerInd = 0; playerInd < players.length; playerInd++){
+%>
+        <section>
+            <img src="<%=players[playerInd].picture %>" alt="<%=players[playerInd].name %>'s picture">
+            <p class="fs-5"><%=players[playerInd].name %></p>
+        </section>
+<%
+    }
+}else{
+%>
+        <h3 class="mt-5 text-center">No players found with the current search criteria.</h3>
+<%  } %>

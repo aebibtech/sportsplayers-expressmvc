@@ -13,10 +13,8 @@ You can also append '?' at the end of the route parameter in order to make it op
 // Router.get("/", Controllers.User.index);
 // Router.get("/hello/:num?", Controllers.User.hello);
 Router.get("/welcome", Controllers.Welcome.index);
-Router.get('/', Controllers.Students.index);
-Router.post('/login', Controllers.Students.login);
-Router.post('/register', Controllers.Students.register);
-Router.get('/logoff', Controllers.Students.logoff);
-Router.get('/students/profile', Controllers.Students.profile);
+Router.get('/', Controllers.SportsPlayers.index);
+Router.get('/search', Controllers.SportsPlayers.search);
+Router.route('/api/search').get(Controllers.SportsPlayers.api_search).post(Controllers.SportsPlayers.api_search);
 
 module.exports = Router;

@@ -1,6 +1,6 @@
 // Configuration parameters
 const config = {
-    PORT: 8888,
+    PORT: 5000,
     MYSQL_CONFIG: {
         host: 'db4free.net',
         user: 'paulaebib',
@@ -13,7 +13,7 @@ const config = {
         saveUninitialized: true,
         cookie: { maxAge: 60000 }
     },
-    ENABLE_PROFILER: true
+    ENABLE_PROFILER: false
 };
 
 module.exports = config;
