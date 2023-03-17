@@ -1,45 +1,54 @@
+*{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+}
+
 form{
-    display: inline-block;
-    width: 20rem;
-    padding: 1rem;
-    padding-bottom: 12%;
-    margin-top: 1rem;
-}
-label{
-    height: 2rem;
-    display: block;
-}
-main{
-    display: inline-block;
-    width: 69.5%;
-    height: 96.3vh;
-    margin-top: 1rem;
-    margin-left: 1rem;
-    vertical-align: top;
-    overflow-y: auto;
-}
-section{
-    display: inline-block;
     width: 30%;
-    vertical-align: text-top;
     margin: 0 auto;
-    margin-top: 2rem;
+    padding: 15px 25px;
+    border-radius: 5px;
+    background-color: #eee;
+    margin-bottom: 25px;
 }
-img{
-    height: 7rem;
-    width: 7rem;
+
+h2{
+    font-size: 2rem;
+}
+
+label{
     display: block;
-    margin: 0 auto;
+    margin-bottom: 20px;
 }
-p{
-    text-align: center;
+
+label span{
+    display: inline-block;
+    width: 160px;
 }
-@media screen and (max-width: 1199px) {
-    form{
-        width: 100%;
-    }
-    main{
-        width: 100%;
-        margin-left: 0;
-    }
+
+.submit-area{
+    text-align: right; 
+}
+
+.submit-area *{
+    display: inline-block;
+}
+
+.submit-area input{
+    background-color: #fff;
+    cursor: pointer;
+    border: none;
+    outline: 0.5px solid #333;
+    border-radius: 5px;
+    padding: 6px 12px;
+    transition: background-color 0.15s;
+}
+
+.submit-area input:hover{
+    background-color: #333;
+    color: #fff;
+}
+
+.error{
+    color: rgb(255, 19, 19);
 }

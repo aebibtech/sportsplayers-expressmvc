@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Welcome</title>
+        <link rel="stylesheet" href="/css/profile.css">
+    </head>
+    <body>
+        <h1>
+            <span>Welcome <%=student.first_name %>!</span>
+            <a href="/logoff">Log off</a>
+        </h1>
+        <main>
+            <p><span>First Name:</span><%=student.first_name %></p>
+            <p><span>Last Name:</span><%=student.last_name %></p>
+            <p><span>Email Address:</span><%=student.email %></p>
+        </main>
+    </body>
+</html>

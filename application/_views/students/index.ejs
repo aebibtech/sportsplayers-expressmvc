@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login and Registration</title>
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+    <body>
+        <form action="/login" method="POST">
+            <h2>Login</h2>
+            <label>
+                <span>Email address: </span>
+                <input type="email" name="login_email" id="login_email">
+            </label>
+            <label>
+                <span>Password: </span>
+                <input type="password" name="login_password" id="login_password">
+            </label>
+            <div class="submit-area">
+                <p class="error"><%=login_error %></p>
+                <input type="submit" value="Login">
+            </div>
+        </form>
+        <form action="/register" method="POST">
+            <h2>Register</h2>
+            <label>
+                <span>First Name: </span>
+                <input type="text" name="first_name" id="first_name">
+            </label>
+            <label>
+                <span>Last Name: </span>
+                <input type="text" name="last_name" id="last_name">
+            </label>
+            <label>
+                <span>Email address: </span>
+                <input type="email" name="register_email" id="register_email">
+            </label>
+            <label>
+                <span>Password: </span>
+                <input type="password" name="register_password" id="register_password">
+            </label>
+            <label>
+                <span>Confirm Password: </span>
+                <input type="password" name="register_cpassword" id="register_cpassword">
+            </label>
+            <div class="submit-area">
+                <input type="submit" value="Register">
+            </div>
+            <% if(register_errors != null){
+                for(var ind = 0; ind < register_errors.length; ind++){    
+            %>
+                <p class="error"><%=register_errors[ind] %></p>
+            <%  }
+               }
+            %>
+        </form>
+    </body>
+</html>
