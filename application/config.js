@@ -13,7 +13,7 @@ const config = {
         saveUninitialized: true,
         cookie: { maxAge: 60000 }
     },
-    ENABLE_PROFILER: false
+    ENABLE_PROFILER: true
 };
 
 module.exports = config;

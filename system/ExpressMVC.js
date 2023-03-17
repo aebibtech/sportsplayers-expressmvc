@@ -21,7 +21,7 @@ app.set('view engine', 'ejs');
 // /* Profiler */
 if(config.ENABLE_PROFILER){
     const profiler = require('./middleware/Profiler');
-    app.use(profiler.profile());
+    app.use(profiler);
 }
 
 /* DO NOT CHANGE - define your routes in the routes.js file */

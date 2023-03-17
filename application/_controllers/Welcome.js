@@ -1,7 +1,6 @@
-const BaseController = require('../../system/BaseController');
 const connection = require('../../system/Database');
 
-class Welcome extends BaseController{
+class Welcome{
     index(request, response){
         response.render('welcome/index');
     }

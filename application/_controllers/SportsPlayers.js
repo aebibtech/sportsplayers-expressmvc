@@ -1,8 +1,7 @@
-const BaseController = require('../../system/BaseController');
 const sport = require('../_models/Sport');
 const sportsPlayer = require('../_models/SportsPlayer');
 
-class SportsPlayers extends BaseController{
+class SportsPlayers{
     /* /index just goes to /search */
     index(request, response){
         response.redirect('/search');
@@ -17,19 +16,17 @@ class SportsPlayers extends BaseController{
 		response.render('sportsplayers/search', viewData);
     }
 
-    async api_search(request, response){
+    /* intended to be consumed by AJAX, renders a partial */
+    async api_search_get(request, response){
         const viewData = {};
-         /* if no search criteria, just get all players
-            else, get players matching the search criteria
-        */
-    	if(!request.body.hasOwnProperty('name') && !request.body.hasOwnProperty('genders') && !request.body.hasOwnProperty('sports')){
-			viewData.players = await sportsPlayer.getAllPlayers();
-    	}else{
-			viewData.players = await sportsPlayer.searchPlayers(request.body);
+		viewData.players = await sportsPlayer.getAllPlayers();
+        response.render('sportsplayers/partial_players', viewData);
+    }
 
-			/* to reflect what was searched on the form */
-			viewData.posted = request.body;
-		}
+    /* intended to be consumed by AJAX, renders a partial */
+    async api_search_post(request, response){
+        const viewData = {};
+        viewData.players = await sportsPlayer.searchPlayers(request.body);
         response.render('sportsplayers/partial_players', viewData);
     }
 }

@@ -15,6 +15,7 @@ You can also append '?' at the end of the route parameter in order to make it op
 Router.get("/welcome", Controllers.Welcome.index);
 Router.get('/', Controllers.SportsPlayers.index);
 Router.get('/search', Controllers.SportsPlayers.search);
-Router.route('/api/search').get(Controllers.SportsPlayers.api_search).post(Controllers.SportsPlayers.api_search);
+Router.get('/api/search', Controllers.SportsPlayers.api_search_get)
+Router.post('/api/search', Controllers.SportsPlayers.api_search_post);
 
 module.exports = Router;
