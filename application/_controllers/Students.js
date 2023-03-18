@@ -1,7 +1,6 @@
-const BaseController = require('../../system/BaseController');
 const student = require('../_models/Student');
 
-class Students extends BaseController{
+class Students{
     index(request, response){
         if(request.session.studentId){
             response.redirect('/students/profile');

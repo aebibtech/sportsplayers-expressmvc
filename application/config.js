@@ -1,7 +1,7 @@
 // Configuration parameters
 const config = {
     PORT: 8888,
-    DATABASE_SYSTEM: 'postgres', // Options: mysql, postgres, redis, mongodb
+    DATABASE_SYSTEM: 'mysql', // Options: mysql, postgres, mongodb
     MYSQL_CONFIG: {
         host: 'db4free.net',
         user: 'paulaebib',
@@ -22,7 +22,13 @@ const config = {
         saveUninitialized: true,
         cookie: { maxAge: 60000 }
     },
-    ENABLE_PROFILER: true
+    SESSION_ON_REDIS: false,
+    REDIS_CONFIG: {
+        host: '127.0.0.1',
+        port: 6379,
+        ttl: 86400
+    },
+    ENABLE_PROFILER: false // disable this on production, pretty please.
 };
 
 module.exports = config;
