@@ -22,6 +22,7 @@ This is a Model-View-Controller (MVC) framework on top of Express.js. If you are
 - EJS Templates for views.
 - Can be used to build an API
 - Built-in profiler
+- Supports the use of `redis` in Sessions
 
 ## Instructions to run
 1. Change directory to the folder that contains this project.
@@ -152,3 +153,9 @@ Currently, it contains the following:
 1. Go to `application/config.js`.
 2. Modify the value of `ENABLE_PROFILER` to `true`.
 3. Save the file.
+
+## Redis as a store for Sessions
+1. Go to `application/config.js`.
+2. Modify the value of `SESSION_ON_REDIS` to `true`.
+3. Change `host` and `port` on `REDIS_CONFIG`.
+4. Save the file.
