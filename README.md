@@ -5,7 +5,7 @@ This is a Model-View-Controller (MVC) framework on top of Express.js. If you are
 ## Folder Structure
 **application/assets** - store static assets (examples: CSS, JS, and image files) here.  
 **application/config.js** - contains project configuration parameters. 
-**application/routes.js** - contains routing parameters.
+**application/routes.js** - contains routing parameters.  
 **application/controllers** - store controller classes here.  
 **application/models** - store model classes here.  
 **application/views** - store view files here. View files follow the EmbeddedJS syntax. Support for different template engines will be developed soon.  
